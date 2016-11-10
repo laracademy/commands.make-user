@@ -1,6 +1,6 @@
 # Laracademy Generators
 
-[![Latest Stable Version](https://poser.pugx.org/laracademy/commands.make-user/v/stable)](https://packagist.org/packages/laracademy/commands.make-user) [![Total Downloads](https://poser.pugx.org/laracademy/commands.make-user/downloads)](https://packagist.org/packages/laracademy/commands.make-user) [![Latest Unstable Version](https://poser.pugx.org/laracademy/commands.make-user/v/unstable)](https://packagist.org/packages/laracademy/commands.make-user) [![License](https://poser.pugx.org/laracademy/commands.make-user/license)](https://packagist.org/packages/laracademy/commands.make-user)
+[![Latest Stable Version](https://poser.pugx.org/laracademy/make/v/stable)](https://packagist.org/packages/laracademy/make) [![Total Downloads](https://poser.pugx.org/laracademy/make/downloads)](https://packagist.org/packages/laracademy/make) [![Latest Unstable Version](https://poser.pugx.org/laracademy/make/v/unstable)](https://packagist.org/packages/laracademy/make) [![License](https://poser.pugx.org/laracademy/make/license)](https://packagist.org/packages/laracademy/make)
 
 **Laracademy `make:user` Command** - provides you a simplistic artisan command to generate users from the console.
 
@@ -17,7 +17,7 @@
 ### Step 1: Install through Composer
 
 ```
-composer require "laracademy/make"
+composer require "laracademy/commands.make-user"
 ```
 
 ### Step 2: Add the Service Provider
