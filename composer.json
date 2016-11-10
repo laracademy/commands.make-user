@@ -1,0 +1,19 @@
+{
+    "name": "laracademy/make",
+    "description": "This package provides you with a simplistic `php artisan make:user` command",
+    "keywords": ["laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael McMullen",
+            "email": "michael@laracademy.co"
+        }
+    ],
+    "require": {},
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+          "Laracademy\\Make\\": "src/"
+        }
+    }
+}
