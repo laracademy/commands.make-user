@@ -17,7 +17,7 @@
 ### Step 1: Install through Composer
 
 ```
-composer require "laracademy/commands.make-user"
+composer require "laracademy/make"
 ```
 
 ### Step 2: Add the Service Provider
