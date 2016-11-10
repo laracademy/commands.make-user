@@ -1,4 +1,4 @@
-# Laracademy Generators
+# Laracademy Make User Command
 
 [![Latest Stable Version](https://poser.pugx.org/laracademy/commands.make-user/v/stable)](https://packagist.org/packages/laracademy/commands.make-user) [![Total Downloads](https://poser.pugx.org/laracademy/commands.make-user/downloads)](https://packagist.org/packages/laracademy/commands.make-user) [![Latest Unstable Version](https://poser.pugx.org/laracademy/commands.make-user/v/unstable)](https://packagist.org/packages/laracademy/commands.make-user) [![License](https://poser.pugx.org/laracademy/commands.make-user/license)](https://packagist.org/packages/laracademy/commands.make-user)
 
@@ -57,7 +57,7 @@ php artisan make:user support@laracademy.co --password=Y
 ```
 
 ## License
-ModelGen is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Laracademy Make User Command is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ### Bug Reporting and Feature Requests
 Please add as many details as possible regarding submission of issues and feature requests
