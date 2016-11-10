@@ -1,8 +1,8 @@
 # Laracademy Generators
 
-[![Latest Stable Version](https://poser.pugx.org/laracademy/generators/v/stable)](https://packagist.org/packages/laracademy/generators) [![Total Downloads](https://poser.pugx.org/laracademy/generators/downloads)](https://packagist.org/packages/laracademy/generators) [![Latest Unstable Version](https://poser.pugx.org/laracademy/generators/v/unstable)](https://packagist.org/packages/laracademy/generators) [![License](https://poser.pugx.org/laracademy/generators/license)](https://packagist.org/packages/laracademy/generators)
+[![Latest Stable Version](https://poser.pugx.org/laracademy/commands.make-user/v/stable)](https://packagist.org/packages/laracademy/commands.make-user) [![Total Downloads](https://poser.pugx.org/laracademy/commands.make-user/downloads)](https://packagist.org/packages/laracademy/commands.make-user) [![Latest Unstable Version](https://poser.pugx.org/laracademy/commands.make-user/v/unstable)](https://packagist.org/packages/laracademy/commands.make-user) [![License](https://poser.pugx.org/laracademy/commands.make-user/license)](https://packagist.org/packages/laracademy/commands.make-user)
 
-**Laracademy Generators** - is a tool set that helps speed up the development process of a Laravel application.
+**Laracademy `make:user` Command** - provides you a simplistic artisan command to generate users from the console.
 
 **Author(s):**
 * [Laracademy](https://laracademy.co) ([@laracademy](http://twitter.com/laracademy), michael@laracademy.co)
@@ -17,99 +17,43 @@
 ### Step 1: Install through Composer
 
 ```
-composer require "laracademy/generators"
+composer require "laracademy/commands.make-user"
 ```
 
 ### Step 2: Add the Service Provider
 The easiest method is to add the following into your `config/app.php` file
 
 ```php
-Laracademy\Generators\GeneratorsServiceProvider::class
-```
-
-Depending on your set up you may want to only use these providers for development, so you don't update your `production` servers. Instead, add the provider in `app/Providers/AppServiceProvider.php' like so
-
-```php
-public function register()
-{
-    if($this->app->environment() == 'local') {
-        $this->app->register('\Laracademy\Generators\GeneratorsServiceProvider');
-    }
-}
+Laracademy\Make\MakeServiceProvider::class
 ```
 
 ### Step 3: Artisan Command
-Now that we have added the generator to our project the last thing to do is run Laravel's Arisan command
+Now that you have successfully installed the package you can run `php artisan`. You should now see an option for `make:user`
 
 ```
-php artisan
+make:user [options] [--] <email>
 ```
 
-You will see the following in the list
-
-```
-generate:modelfromtable
-```
-
-## Commands
-
-### generate:modelfromtable
-
-This command will read your database table and generate a model based on that table structure. The fillable fields, casts, dates and even namespacing will be filled in automatically.
-
-You can use this command to generate a single table, multiple tables or all of your tables at once.
-
-This command comes with a bunch of different options, please see below for each parameter
-
-* --table=
-  * This parameter if filled in will generate a model for the given table.
-   * You can also pass in a list of tables using comma separated values.
-* --all
-  * If this flag is present, then the table command will be ignored.
-   * This will generate a model for **all** tables found in your database.
-   * _please note that this command will only ignore the `migrations` table and no model will be generate for it_
-* --connection=
-  * by default if this option is omitted then the generate will use the default connection found in `config/database.php`
-  * To specify a connection ensure that it exists in your `config/database.php` first.
-* --folder=
-  * by default all models are store in your _app/_ directory. If you wish to store them in another place you can provide the relative path from your base laravel application.
-  * please see examples for more information
-* --namespace=
-  * by default all models will have the namespace of App
-  * you can change the namespace by adding this option
-* --debug
-  * this shows some more information while running
+### Valid Options
+ - name
+   - This is the name you would like to assign to the user, if not supplied the email address will be used.
+ - password
+   - This is thte password you would like to assign to the user, if not supplied a random 8 characters will be used.
 
 ## Examples
-
-### Generating a single table
-
+### Generating a random user
 ```
-php artisan generate:modelfromtable --table=users
+php artisan make:user support@laracademy.co
 ```
 
-### Generating a multiple tables
-
+### Assigning the user's name when generating their account
 ```
-php artisan generate:modelfromtable --table=users,posts
-```
-
-### Generating all tables
-
-```
-php artisan generate:modelfromtable --all
+php artisan make:user support@laracademy.co --name=Mickey
 ```
 
-### Changing to another connection found in `database.php` and generating models for all tables
-
+### Assigning the user's password when generating their account
 ```
-php artisan generate:modelfromtable --connection=spark --all
-```
-
-### Changing the folder where to /app/Models
-
-```
-php artisan generate:modelfromtable --table=user --folder=app\Models
+php artisan make:user support@laracademy.co --password=Y
 ```
 
 ## License
