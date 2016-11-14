@@ -56,6 +56,12 @@ php artisan make:user support@laracademy.co --name=Mickey
 php artisan make:user support@laracademy.co --password=Y
 ```
 
+### Accessing a different User Model
+```
+php artisan make:user support@laracademy.co --userclass=\\App\\Models\\User
+```
+_please note that double backslashes must be used in order to be picked up correctly_
+
 ## License
 ModelGen is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
