@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/laracademy/make/v/stable)](https://packagist.org/packages/laracademy/make) [![Total Downloads](https://poser.pugx.org/laracademy/make/downloads)](https://packagist.org/packages/laracademy/make) [![Latest Unstable Version](https://poser.pugx.org/laracademy/make/v/unstable)](https://packagist.org/packages/laracademy/make) [![License](https://poser.pugx.org/laracademy/make/license)](https://packagist.org/packages/laracademy/make)
 
-**Laracademy `make:user` Command** - provides you a simplistic artisan command to generate users from the console.
+**Laracademy `make:user` Command** - provides you with a simplistic artisan command to generate users from the console.
 
 **Author(s):**
 * [Laracademy](https://laracademy.co) ([@laracademy](http://twitter.com/laracademy), michael@laracademy.co)
