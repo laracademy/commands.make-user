@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/laracademy/make/v/stable)](https://packagist.org/packages/laracademy/make) [![Total Downloads](https://poser.pugx.org/laracademy/make/downloads)](https://packagist.org/packages/laracademy/make) [![Latest Unstable Version](https://poser.pugx.org/laracademy/make/v/unstable)](https://packagist.org/packages/laracademy/make) [![License](https://poser.pugx.org/laracademy/make/license)](https://packagist.org/packages/laracademy/make)
 
-**Laracademy `make:user` Command** - provides you a simplistic artisan command to generate users from the console.
+**Laracademy `make:user` Command** - provides you with a simplistic artisan command to generate users from the console.
 
 **Author(s):**
 * [Laracademy](https://laracademy.co) ([@laracademy](http://twitter.com/laracademy), michael@laracademy.co)
@@ -38,7 +38,7 @@ make:user [options] [--] <email>
  - name
    - This is the name you would like to assign to the user, if not supplied the email address will be used.
  - password
-   - This is thte password you would like to assign to the user, if not supplied a random 8 characters will be used.
+   - This is the password you would like to assign to the user, if not supplied a random 8 characters will be used.
 
 ## Examples
 ### Generating a random user
@@ -63,7 +63,7 @@ php artisan make:user support@laracademy.co --userclass=\\App\\Models\\User
 _please note that double backslashes must be used in order to be picked up correctly_
 
 ## License
-ModelGen is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+make-user is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ### Bug Reporting and Feature Requests
 Please add as many details as possible regarding submission of issues and feature requests
